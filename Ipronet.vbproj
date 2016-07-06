@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0BD3D5CB-ACFA-45EE-B93B-6B9AAC605B2C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>Ipronet</RootNamespace>
+    <AssemblyName>Ipronet</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Ipronet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Ipronet.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>HSLOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fileAyCed.vb" />
+    <Compile Include="fileAyDir.vb" />
+    <Compile Include="fileAyItd.vb" />
+    <Compile Include="fileBrkMst.vb" />
+    <Compile Include="fileBrkTrty.vb" />
+    <Compile Include="fileCatMst.vb" />
+    <Compile Include="fileGlMgaRef.vb" />
+    <Compile Include="fileIbnrCed.vb" />
+    <Compile Include="fileIbnrDir.vb" />
+    <Compile Include="fileIbnrPrm.vb" />
+    <Compile Include="fileItdAccyr.vb" />
+    <Compile Include="fileItdCed.vb" />
+    <Compile Include="fileItdDir.vb" />
+    <Compile Include="fileMgaChkLst.vb" />
+    <Compile Include="filePeriod.vb" />
+    <Compile Include="fileRptCed.vb" />
+    <Compile Include="fileRptDir.vb" />
+    <Compile Include="fileStateRef.vb" />
+    <Compile Include="fileTrtyPrm.vb" />
+    <Compile Include="fileUepCed.vb" />
+    <Compile Include="fileUepDir.vb" />
+    <Compile Include="fileWorkCed.vb" />
+    <Compile Include="fileWorkDir.vb" />
+    <Compile Include="fileXTrtyMst.vb" />
+    <Compile Include="fileYtdCed.vb" />
+    <Compile Include="fileYtdDir.vb" />
+    <Compile Include="frmBrkEntry.Designer.vb">
+      <DependentUpon>frmBrkEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrkEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatMnt.Designer.vb">
+      <DependentUpon>frmCatMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCedEntry.Designer.vb">
+      <DependentUpon>frmCedEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCedEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCodPrt.Designer.vb">
+      <DependentUpon>frmCodPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCodPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoyCloseout.Designer.vb">
+      <DependentUpon>frmEoyCloseout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoyCloseout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoyItdAccum.Designer.vb">
+      <DependentUpon>frmEoyItdAccum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoyItdAccum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoyReinalloc.Designer.vb">
+      <DependentUpon>frmEoyReinalloc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoyReinalloc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoyReinalloc2.Designer.vb">
+      <DependentUpon>frmEoyReinalloc2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoyReinalloc2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoyReinalloc3.Designer.vb">
+      <DependentUpon>frmEoyReinalloc3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoyReinalloc3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoyReinallocPrt.Designer.vb">
+      <DependentUpon>frmEoyReinallocPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoyReinallocPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoySchedp.Designer.vb">
+      <DependentUpon>frmEoySchedp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoySchedp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoySchedpTot.Designer.vb">
+      <DependentUpon>frmEoySchedpTot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoySchedpTot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoyUepUpdate.Designer.vb">
+      <DependentUpon>frmEoyUepUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoyUepUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEoyYtdAccum.Designer.vb">
+      <DependentUpon>frmEoyYtdAccum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEoyYtdAccum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGlMgaRef.Designer.vb">
+      <DependentUpon>frmGlMgaRef.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGlMgaRef.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeBase.vb" />
+    <Compile Include="frmIbnrAccumPrt.Designer.vb">
+      <DependentUpon>frmIbnrAccumPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIbnrAccumPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIbnrAyAccum.Designer.vb">
+      <DependentUpon>frmIbnrAyAccum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIbnrAyAccum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIbnrBldAyrNet.Designer.vb">
+      <DependentUpon>frmIbnrBldAyrNet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIbnrBldAyrNet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIbnrCalc.Designer.vb">
+      <DependentUpon>frmIbnrCalc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIbnrCalc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIbnrCed.Designer.vb">
+      <DependentUpon>frmIbnrCed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIbnrCed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIbnrMerge.Designer.vb">
+      <DependentUpon>frmIbnrMerge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIbnrMerge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIbnrPrmMnt.Designer.vb">
+      <DependentUpon>frmIbnrPrmMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIbnrPrmMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIbnrPrtAccyr.Designer.vb">
+      <DependentUpon>frmIbnrPrtAccyr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmIbnrPrtAccyr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItdRpt.Designer.vb">
+      <DependentUpon>frmItdRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmItdRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMgaChkLst.Designer.vb">
+      <DependentUpon>frmMgaChkLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMgaChkLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMgaComments.Designer.vb">
+      <DependentUpon>frmMgaComments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMgaComments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMgaEntry.Designer.vb">
+      <DependentUpon>frmMgaEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMgaEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMgaRpt.Designer.vb">
+      <DependentUpon>frmMgaRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMgaRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPassEntry.Designer.vb">
+      <DependentUpon>frmPassEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPassEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPeriod.Designer.vb">
+      <DependentUpon>frmPeriod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPeriod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQcedtot.Designer.vb">
+      <DependentUpon>frmQcedtot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQcedtot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQdirtot.Designer.vb">
+      <DependentUpon>frmQdirtot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQdirtot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQpfallocced.Designer.vb">
+      <DependentUpon>frmQpfallocced.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQpfallocced.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQpfallocdir.Designer.vb">
+      <DependentUpon>frmQpfallocdir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQpfallocdir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReiComments.Designer.vb">
+      <DependentUpon>frmReiComments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReiComments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReiEntry.Designer.vb">
+      <DependentUpon>frmReiEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReiEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReiRef.Designer.vb">
+      <DependentUpon>frmReiRef.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReiRef.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptAudLst.Designer.vb">
+      <DependentUpon>frmRptAudLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptAudLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptCedGen.Designer.vb">
+      <DependentUpon>frmRptCedGen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptCedGen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptEntry.Designer.vb">
+      <DependentUpon>frmRptEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptSpc.Designer.vb">
+      <DependentUpon>frmRptSpc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptSpc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptSpc1.Designer.vb">
+      <DependentUpon>frmRptSpc1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptSpc1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptSpc2.Designer.vb">
+      <DependentUpon>frmRptSpc2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptSpc2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptStatCommQtr.Designer.vb">
+      <DependentUpon>frmRptStatCommQtr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptStatCommQtr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptStatPpQtr.Designer.vb">
+      <DependentUpon>frmRptStatPpQtr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptStatPpQtr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptTrtyInfo.Designer.vb">
+      <DependentUpon>frmRptTrtyInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptTrtyInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRptYtdMgaBrkDown.Designer.vb">
+      <DependentUpon>frmRptYtdMgaBrkDown.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRptYtdMgaBrkDown.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTotByMGADir.Designer.vb">
+      <DependentUpon>frmTotByMGADir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTotByMGADir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTotByMGADirPd.Designer.vb">
+      <DependentUpon>frmTotByMGADirPd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTotByMGADirPd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTotExpMGA.Designer.vb">
+      <DependentUpon>frmTotExpMGA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTotExpMGA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrtyBrkAssignment.Designer.vb">
+      <DependentUpon>frmTrtyBrkAssignment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrtyBrkAssignment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrtyComments.Designer.vb">
+      <DependentUpon>frmTrtyComments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrtyComments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrtyMnt.Designer.vb">
+      <DependentUpon>frmTrtyMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrtyMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrtyPrm.Designer.vb">
+      <DependentUpon>frmTrtyPrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrtyPrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrtyRei.Designer.vb">
+      <DependentUpon>frmTrtyRei.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrtyRei.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsVars.vb" />
+    <Compile Include="fileReiMst.vb" />
+    <Compile Include="fileReinalloc.vb" />
+    <Compile Include="fileTrtyMst.vb" />
+    <Compile Include="fileMgaMst.vb" />
+    <Compile Include="FileProcesses.VB" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Program.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmBrkEntry.resX">
+      <DependentUpon>frmBrkEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatMnt.resX">
+      <DependentUpon>frmCatMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCedEntry.resX">
+      <DependentUpon>frmCedEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCodPrt.resX">
+      <DependentUpon>frmCodPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoyCloseout.resX">
+      <DependentUpon>frmEoyCloseout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoyItdAccum.resX">
+      <DependentUpon>frmEoyItdAccum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoyReinalloc.resX">
+      <DependentUpon>frmEoyReinalloc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoyReinalloc2.resX">
+      <DependentUpon>frmEoyReinalloc2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoyReinalloc3.resX">
+      <DependentUpon>frmEoyReinalloc3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoyReinallocPrt.resX">
+      <DependentUpon>frmEoyReinallocPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoySchedp.resX">
+      <DependentUpon>frmEoySchedp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoySchedpTot.resX">
+      <DependentUpon>frmEoySchedpTot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoyUepUpdate.resX">
+      <DependentUpon>frmEoyUepUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEoyYtdAccum.resX">
+      <DependentUpon>frmEoyYtdAccum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGlMgaRef.resX">
+      <DependentUpon>frmGlMgaRef.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIbnrAccumPrt.resX">
+      <DependentUpon>frmIbnrAccumPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIbnrAyAccum.resX">
+      <DependentUpon>frmIbnrAyAccum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIbnrBldAyrNet.resX">
+      <DependentUpon>frmIbnrBldAyrNet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIbnrCalc.resX">
+      <DependentUpon>frmIbnrCalc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIbnrCed.resX">
+      <DependentUpon>frmIbnrCed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIbnrMerge.resX">
+      <DependentUpon>frmIbnrMerge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIbnrPrmMnt.resX">
+      <DependentUpon>frmIbnrPrmMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIbnrPrtAccyr.resX">
+      <DependentUpon>frmIbnrPrtAccyr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItdRpt.resX">
+      <DependentUpon>frmItdRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMgaChkLst.resX">
+      <DependentUpon>frmMgaChkLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMgaComments.resX">
+      <DependentUpon>frmMgaComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMgaEntry.resX">
+      <DependentUpon>frmMgaEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMgaRpt.resX">
+      <DependentUpon>frmMgaRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPassEntry.resX">
+      <DependentUpon>frmPassEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPeriod.resX">
+      <DependentUpon>frmPeriod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQcedtot.resX">
+      <DependentUpon>frmQcedtot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQdirtot.resX">
+      <DependentUpon>frmQdirtot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQpfallocced.resX">
+      <DependentUpon>frmQpfallocced.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQpfallocdir.resX">
+      <DependentUpon>frmQpfallocdir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReiComments.resX">
+      <DependentUpon>frmReiComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReiEntry.resX">
+      <DependentUpon>frmReiEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReiRef.resX">
+      <DependentUpon>frmReiRef.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptAudLst.resX">
+      <DependentUpon>frmRptAudLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptCedGen.resX">
+      <DependentUpon>frmRptCedGen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptEntry.resX">
+      <DependentUpon>frmRptEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptSpc.resX">
+      <DependentUpon>frmRptSpc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptSpc1.resX">
+      <DependentUpon>frmRptSpc1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptSpc2.resX">
+      <DependentUpon>frmRptSpc2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptStatCommQtr.resX">
+      <DependentUpon>frmRptStatCommQtr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptStatPpQtr.resX">
+      <DependentUpon>frmRptStatPpQtr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptTrtyInfo.resX">
+      <DependentUpon>frmRptTrtyInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRptYtdMgaBrkDown.resX">
+      <DependentUpon>frmRptYtdMgaBrkDown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTotByMGADir.resX">
+      <DependentUpon>frmTotByMGADir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTotByMGADirPd.resX">
+      <DependentUpon>frmTotByMGADirPd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTotExpMGA.resX">
+      <DependentUpon>frmTotExpMGA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrtyBrkAssignment.resX">
+      <DependentUpon>frmTrtyBrkAssignment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrtyComments.resX">
+      <DependentUpon>frmTrtyComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrtyMnt.resX">
+      <DependentUpon>frmTrtyMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrtyPrm.resX">
+      <DependentUpon>frmTrtyPrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrtyRei.resX">
+      <DependentUpon>frmTrtyRei.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="c4dll.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="formbuttonhelp.png" />
+    <None Include="Resources\formbuttonhelp.png" />
+    <Content Include="HSLOGO.ico" />
+    <Content Include="zlib.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

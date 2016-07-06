@@ -607,7 +607,7 @@ Module FileProcesses
     End Function
 
     Public Sub GetFilePaths()
-        Dpath = "\\waconas003\Waco\InsPro\Data\HSIG\"
+        Dpath = "\waconas003\Waco\InsPro\PreviousQuarters\HSIG_2Q16\HSIG\"
         Nmgamst = Dpath + "MGAMST.DBF"
         Nreimst = Dpath + "REIMST.DBF"
         Ntrtymst = Dpath + "TRTYMST.DBF"
